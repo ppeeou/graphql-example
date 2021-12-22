@@ -70,3 +70,12 @@
 ### 12-modularizing
 
 - [modularizing](https://www.apollographql.com/blog/backend/schema-design/modularizing-your-graphql-schema-code/)
+
+### 13-error-handling
+
+- [error-handling](https://www.apollographql.com/docs/apollo-server/data/errors/)
+
+### 14-auth
+
+- [authentication](https://www.apollographql.com/docs/apollo-server/security/authentication/)
+- [authorization 3 ways](https://jkettmann.com/3-ways-for-authorization-with-graphql-and-apollo)
