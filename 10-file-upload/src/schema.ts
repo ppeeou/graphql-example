@@ -1,7 +1,9 @@
-import { gql } from "apollo-server";
+import { gql, UserInputError } from "apollo-server";
 import { GraphQLUpload } from "graphql-upload";
+import path from "path";
 import fs from "fs";
 import { finished } from "stream/promises";
+import mime from "mime-types";
 
 export const typeDefs = gql`
   scalar Upload
@@ -31,14 +33,16 @@ export const resolvers = {
       // Invoking the `createReadStream` will return a Readable Stream.
       // See https://nodejs.org/api/stream.html#stream_readable_streams
       const stream = createReadStream();
+      const ext = mime.extension(mimetype);
 
-      // This is purely for demonstration purposes and will overwrite the
-      // local-file-output.txt in the current working directory on EACH upload.
-      const out = fs.createWriteStream("local-file-output.txt");
+      if (ext !== "jpeg") {
+        throw new UserInputError("only jpeg");
+      }
 
+      const basename = path.parse(filename).name;
+      const out = fs.createWriteStream(`${basename}.${ext}`);
       stream.pipe(out);
       await finished(out);
-
       return { filename, mimetype, encoding };
     },
   },
