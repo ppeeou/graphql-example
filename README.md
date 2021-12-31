@@ -57,7 +57,6 @@
 
 - [file-upload](https://www.apollographql.com/docs/apollo-server/data/file-uploads/#integrating-with-express)
   - [upload-best-practices](https://www.apollographql.com/blog/backend/file-uploads/file-upload-best-practices/)
-  - [aws ex](https://www.apollographql.com/blog/graphql/file-uploads/with-react-hooks-typescript-amazon-s3-tutorial/#apollo-server)
 
 ### 11-paging
 
@@ -79,3 +78,7 @@
 
 - [authentication](https://www.apollographql.com/docs/apollo-server/security/authentication/)
 - [authorization 3 ways](https://jkettmann.com/3-ways-for-authorization-with-graphql-and-apollo)
+
+### 15-file-upload-aws
+
+- [aws ex](https://www.apollographql.com/blog/graphql/file-uploads/with-react-hooks-typescript-amazon-s3-tutorial/#apollo-server)
